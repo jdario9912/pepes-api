@@ -1,5 +1,5 @@
 const app = require('./app');
-const { dotenv, port} = require('./config');
+const { dotenv, port } = require('./config');
 
 dotenv.config();
 

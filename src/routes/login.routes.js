@@ -1,12 +1,9 @@
 const express = require('express');
+const { login } = require('../controllers/login.controller');
 const routerLogin = express.Router();
 
 routerLogin.use(express.json());
 
-routerLogin.get('/', (req, res) => {
-  const infoLogin = req.body;
-  console.log(infoLogin);
-});
+routerLogin.post('/', login);
 
-
-// TENGO QUE TERMINAR ESTAS RUTAS
+module.exports = routerLogin;

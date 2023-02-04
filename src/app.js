@@ -3,12 +3,14 @@ const cors = require('cors');
 const app = express();
 const pool = require('./db');
 const routerEmpleados = require('./routes/empleados.routes');
+const routerLogin = require("./routes/login.routes");
 
 app.use(cors());
 app.use(express.json());
 
 // Routers
 app.use('/api/empleados', routerEmpleados);
+app.use('/api/login', routerLogin);
 
 app.get("/", async (req, res) => {
   console.log(req);
