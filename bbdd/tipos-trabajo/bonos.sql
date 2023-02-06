@@ -14,7 +14,7 @@ CREATE TABLE bonos (
   numeradores INT(1),
   lotes INT(3),
   observaciones VARCHAR(255),
-  saldo INT(7),
+  total INT(7),
   entrega INT(7),
   estado VARCHAR(20),
   PRIMARY KEY (id),
@@ -36,7 +36,7 @@ INSERT INTO bonos (
   numeradores,
   lotes,
   observaciones,
-  saldo,
+  total,
   entrega,
   estado
 ) VALUES

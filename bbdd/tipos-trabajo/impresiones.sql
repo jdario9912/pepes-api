@@ -16,7 +16,7 @@ CREATE TABLE impresiones (
   abrochado VARCHAR(2),
   corte VARCHAR(2),
   observaciones VARCHAR(255),
-  saldo INT(7),
+  total INT(7),
   entrega INT(7),
   estado VARCHAR(20),
   PRIMARY KEY (id),
@@ -40,7 +40,7 @@ INSERT INTO impresiones (
   abrochado,
   corte,
   observaciones,
-  saldo,
+  total,
   entrega,
   estado
 ) VALUES 

@@ -19,7 +19,7 @@ CREATE TABLE talonarios (
   triplicado VARCHAR(2),
   color_triplicado VARCHAR(8),
   observaciones VARCHAR(255),
-  saldo INT(7),
+  total INT(7),
   entrega INT(7),
   estado VARCHAR(20),
   PRIMARY KEY (id),
@@ -46,7 +46,7 @@ INSERT INTO talonarios (
   triplicado,
   color_triplicado,
   observaciones,
-  saldo,
+  total,
   entrega,
   estado
 ) VALUES
