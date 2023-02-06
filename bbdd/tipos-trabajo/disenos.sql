@@ -1,4 +1,4 @@
-CREATE TABLE nombre (
+CREATE TABLE disenos (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
@@ -6,8 +6,9 @@ CREATE TABLE nombre (
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
   muestra VARCHAR(2),
-  tipo_trabajo VARCHAR(20) DEFAULT 'nombre',
-  
+  tipo_trabajo VARCHAR(20) DEFAULT 'disenos',
+  ubicacion_archivo VARCHAR(100),
+  detalles VARCHAR(255),
   observaciones VARCHAR(255),
   total INT(7),
   entrega INT(7),
@@ -17,17 +18,20 @@ CREATE TABLE nombre (
   ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO nombre (
+INSERT INTO disenos (
   id_cliente,
   nro_orden,
   atendido_por,
   fecha_entrega,
   hora_entrega,
   muestra,
-  
+  ubicacion_archivo,
+  detalles,
   observaciones,
   total,
   entrega,
   estado
 ) VALUES
-()
+(2, 23, 'Tomy', '11/03/2023', '19:00', 'si', 'whatsap', 'monos verdes', '', 200, 50, 'pendiente'),
+(7, 24, 'Laura', '11/03/2023', '19:00', 'si', 'whatsap', 'perros naranjas', '', 200, 50, 'realizado'),
+(5, 25, 'Vane', '11/03/2023', '19:00', 'si', 'whatsap', 'sapos comestibles', '', 200, 50, 'entregado');
