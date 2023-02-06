@@ -2,6 +2,10 @@ CREATE TABLE loma (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  atendido_por VARCHAR(50),
+  fecha_entrega VARCHAR(10),
+  hora_entrega VARCHAR(6),
+  muestra VARCHAR(2),
   tipo_trabajo VARCHAR(20) DEFAULT 'loma',
   ubicacion_archivo VARCHAR (100),
   material VARCHAR(14),
@@ -12,6 +16,8 @@ CREATE TABLE loma (
   troquelado VARCHAR(2),
   portabaner VARCHAR(2),
   observaciones VARCHAR(255),
+  saldo INT(7),
+  entrega INT(7),
   estado VARCHAR(20),
   PRIMARY KEY (id),
   FOREIGN KEY(id_cliente) REFERENCES clientes(id)
@@ -21,6 +27,10 @@ CREATE TABLE loma (
 INSERT INTO loma (
   id_cliente,
   nro_orden,
+  atendido_por,
+  fecha_entrega,
+  hora_entrega,
+  muestra,
   ubicacion_archivo,
   material,
   orientacion,
@@ -30,12 +40,14 @@ INSERT INTO loma (
   troquelado,
   portabaner,
   observaciones,
+  saldo,
+  entrega,
   estado
 ) VALUES 
-(7, 6, 'pc 15', 'Vinillo Brillo', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 'pendiente'),
-(2, 7, 'pc 1', 'Vinillo Mate', 'vertical', 'arriba', 'si', 'si', 'si', 'no', 'no tiene', 'entregado'),
-(3, 8, 'pc 4', 'Papel', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 'enviar a proveedor'),
-(7, 9, 'pc pepo', 'Lona Front', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 'realizado'),
-(6, 10, 'pc maru', 'Transparente', 'vertical', 'no', 'no', 'si', 'si', 'no', 'no tiene', 'pendiente'),
-(6, 11, 'pc principal', 'Lona Back', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 'realizado'),
-(8, 12, 'pc 4', 'Micro', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 'pendiente');
+(7, 6, 'Maru', '08/02/2023', '19:00', 'no', 'pc 15', 'Vinillo Brillo', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente'),
+(2, 7, 'Maru', '08/02/2023', '19:00', 'no', 'pc 1', 'Vinillo Mate', 'vertical', 'arriba', 'si', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'entregado'),
+(3, 8, 'Maru', '08/02/2023', '19:00', 'no', 'pc 4', 'Papel', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'enviar a proveedor'),
+(7, 9, 'Maru', '08/02/2023', '19:00', 'no', 'pc pepo', 'Lona Front', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'realizado'),
+(6, 10, 'Maru', '08/02/2023', '19:00', 'no', 'pc maru', 'Transparente', 'vertical', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente'),
+(6, 11, 'Maru', '08/02/2023', '19:00', 'no', 'pc principal', 'Lona Back', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'realizado'),
+(8, 12, 'Maru', '08/02/2023', '19:00', 'no', 'pc 4', 'Micro', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente');

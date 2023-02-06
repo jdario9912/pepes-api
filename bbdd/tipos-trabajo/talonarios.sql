@@ -2,6 +2,10 @@ CREATE TABLE talonarios (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  atendido_por VARCHAR(50),
+  fecha_entrega VARCHAR(10),
+  hora_entrega VARCHAR(6),
+  muestra VARCHAR(2),
   tipo_trabajo VARCHAR(20) DEFAULT 'talonarios',
   tipo VARCHAR(14),
   cantidad INT(5),
@@ -15,6 +19,8 @@ CREATE TABLE talonarios (
   triplicado VARCHAR(2),
   color_triplicado VARCHAR(8),
   observaciones VARCHAR(255),
+  saldo INT(7),
+  entrega INT(7),
   estado VARCHAR(20),
   PRIMARY KEY (id),
   FOREIGN KEY(id_cliente) REFERENCES clientes(id)
@@ -24,6 +30,10 @@ CREATE TABLE talonarios (
 INSERT INTO talonarios (
   id_cliente,
   nro_orden,
+  atendido_por,
+  fecha_entrega,
+  hora_entrega,
+  muestra,
   tipo,
   cantidad,
   tamano,
@@ -36,11 +46,13 @@ INSERT INTO talonarios (
   triplicado,
   color_triplicado,
   observaciones,
+  saldo,
+  entrega,
   estado
 ) VALUES
-(3, 13, 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'simple', 'amarillo', 'no', '', 'super talonario', 'enviar a proveedor'),
-(3, 14, 'Recibo C', 3, '1/2', 'si', 'si', 'pc 4', '356', 'doble', 'rosa', 'no', '', 'super talonario', 'realizado'),
-(7, 15, 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'sueltas', 'verde', 'no', '', 'super talonario', 'realizado'),
-(8, 16, 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'emblocado', 'celeste', 'no', '', 'super talonario', 'realizado'),
-(1, 17, 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'simple', 'amarillo', 'no', '', 'super talonario', 'realizado'),
-(6, 18, 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'doble', 'rosa', 'no', '', 'super talonario', 'realizado');
+(3, 13,'Pepo', '23/03/2023', '19:00', 'no', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'simple', 'amarillo', 'no', '', 'super talonario', 2000, 1000, 'enviar a proveedor'),
+(3, 14,'Maru', '03/04/2023', '19:00', 'no', 'Recibo C', 3, '1/2', 'si', 'si', 'pc 4', '356', 'doble', 'rosa', 'no', '', 'super talonario', 2000, 1000, 'realizado'),
+(7, 15,'Pepo', '13/03/2023', '19:00', 'si', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'sueltas', 'verde', 'no', '', 'super talonario', 2000, 1000, 'realizado'),
+(8, 16,'Pepo', '21/06/2023', '19:00', 'si', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'emblocado', 'celeste', 'no', '', 'super talonario', 2000, 1000, 'realizado'),
+(1, 17,'Maru', '03/04/2023', '19:00', 'no', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'simple', 'amarillo', 'no', '', 'super talonario', 2000, 1000, 'realizado'),
+(6, 18,'Pepo', '02/03/2023', '19:00', 'no', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'doble', 'rosa', 'no', '', 'super talonario', 2000, 1000, 'realizado');
