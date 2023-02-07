@@ -39,7 +39,7 @@ INSERT INTO volantes (
   estado
 ) VALUES
 (5, 43, 'Joel', '13/04/2023', '19:00', 'si', 'Escala de grises', '1/4', 250, 'Frente y dorso', 'pc 2', '', 1450, 400, 'pendiente'),
-(6, 43, 'Joel', '13/04/2023', '19:00', 'si', 'Color', '1/2', 500, 'Frente', 'pc 2', '', 1450, 400, 'pendiente'),
-(7, 43, 'Joel', '13/04/2023', '19:00', 'si', 'Color', '1/8', 1000, 'Frente', 'pc 2', '', 1450, 400, 'enviar a proveedor'),
-(8, 43, 'Joel', '13/04/2023', '19:00', 'si', 'Color', 'otro', 2000, 'Frente', 'pc 2', '', 1450, 400, 'realizado'),
-(5, 43, 'Joel', '13/04/2023', '19:00', 'si', 'Escala de grises', '1/4', 5000, 'Frente y dorso', 'pc 2', '', 1450, 400, 'entregado');
+(6, 44, 'Joel', '13/04/2023', '19:00', 'si', 'Color', '1/2', 500, 'Frente', 'pc 2', '', 1450, 400, 'pendiente'),
+(7, 45, 'Joel', '13/04/2023', '19:00', 'si', 'Color', '1/8', 1000, 'Frente', 'pc 2', '', 1450, 400, 'enviar a proveedor'),
+(8, 46, 'Joel', '13/04/2023', '19:00', 'si', 'Color', 'otro', 2000, 'Frente', 'pc 2', '', 1450, 400, 'realizado'),
+(5, 47, 'Joel', '13/04/2023', '19:00', 'si', 'Escala de grises', '1/4', 5000, 'Frente y dorso', 'pc 2', '', 1450, 400, 'entregado');
