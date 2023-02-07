@@ -39,12 +39,12 @@ INSERT INTO tarjetas (
   estado
 ) VALUES
 (4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 1/0', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/0', 200, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/1', 1000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/4', 2000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/1', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/4', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X1', 1000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X2', 2000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'entregado'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X1', 100, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'entregado'),
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X2', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente');
+(4, 34, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/0', 200, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
+(4, 35, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/1', 1000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
+(4, 36, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/4', 2000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
+(4, 37, 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/1', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
+(4, 38, 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/4', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
+(4, 39, 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X1', 1000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
+(4, 40, 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X2', 2000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'entregado'),
+(4, 41, 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X1', 100, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'entregado'),
+(4, 42, 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X2', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente');
