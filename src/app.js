@@ -16,7 +16,7 @@ app.use('/api/clientes', routerClientes);
 
 app.get("/", async (req, res) => {
   const [rows] = await pool.query(
-    "SELECT 'Sistema para Pepes funcionando con base de datos' AS detalle"
+    "SELECT 'Sistema para Pepes funcionando con base de datos' AS Mensaje"
   );
   res.json(rows[0]);
 });
