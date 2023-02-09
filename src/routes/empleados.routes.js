@@ -7,7 +7,7 @@ routerEmpleados.get('/', obtenerEmpleados);
 routerEmpleados.get('/:nickname', obtenerEmpleado);
 
 // POST
-routerEmpleados.post('/user', crearEmpleadoUser);
+routerEmpleados.post('/', crearEmpleadoUser);
 
 // PUT
 routerEmpleados.put('/:id', actualizarEmpleado);
