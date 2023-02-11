@@ -56,3 +56,4 @@ INSERT INTO talonarios (
 (8, 16,'Pepo', '21/06/2023', '19:00', 'si', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'emblocado', 'celeste', 'no', '', 'super talonario', 2000, 1000, 'realizado'),
 (1, 17,'Maru', '03/04/2023', '19:00', 'no', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'simple', 'amarillo', 'no', '', 'super talonario', 2000, 1000, 'realizado'),
 (6, 18,'Pepo', '02/03/2023', '19:00', 'no', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'doble', 'rosa', 'no', '', 'super talonario', 2000, 1000, 'realizado');
+(6, 18,'Eli', '02/03/2023', '19:00', 'no', 'Factura C', 3, 'A4', 'si', 'si', 'pc 4', '4350', 'doble', 'rosa', 'no', '', 'super talonario', 2000, 1000, 'pendiente');
