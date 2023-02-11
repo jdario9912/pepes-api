@@ -2,6 +2,7 @@ CREATE TABLE sellos (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -23,6 +24,7 @@ CREATE TABLE sellos (
 INSERT INTO sellos (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -36,7 +38,7 @@ INSERT INTO sellos (
   entrega,
   estado
 ) VALUES
-(1, 48, 'Joel', '13/04/2023', '19:00', 'si', 'Madera', 'Grande', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'pendiente'),
-(2, 49, 'Joel', '08/04/2023', '19:00', 'si', 'Automatico', 'Mediano', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'realizado'),
-(3, 50, 'Joel', '03/03/2023', '19:00', 'si', 'Pocket', 'Chico', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'entregado'),
-(4, 51, 'Joel', '22/03/2023', '19:00', 'si', 'Otro', 'Grande', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'pendiente');
+(1, 48, '06/10/2023', 'Joel', '13/04/2023', '19:00', 'si', 'Madera', 'Grande', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'pendiente'),
+(2, 49, '06/10/2023', 'Joel', '08/04/2023', '19:00', 'si', 'Automatico', 'Mediano', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'realizado'),
+(3, 50, '06/10/2023', 'Joel', '03/03/2023', '19:00', 'si', 'Pocket', 'Chico', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'entregado'),
+(4, 51, '06/10/2023', 'Joel', '22/03/2023', '19:00', 'si', 'Otro', 'Grande', 'Ingeniero Salas', 'Maquina', '', 550, 200, 'pendiente');

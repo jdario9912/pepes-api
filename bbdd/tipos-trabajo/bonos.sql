@@ -2,6 +2,7 @@ CREATE TABLE bonos (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -25,6 +26,7 @@ CREATE TABLE bonos (
 INSERT INTO bonos (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -40,7 +42,7 @@ INSERT INTO bonos (
   entrega,
   estado
 ) VALUES
-(1, 19, 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'pendiente'),
-(1, 20, 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'entregado'),
-(1, 21, 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'realizado'),
-(1, 22, 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'pendiente');
+(1, 19, '29/12/2022', 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'pendiente'),
+(1, 20, '29/12/2022', 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'entregado'),
+(1, 21, '29/12/2022', 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'realizado'),
+(1, 22, '29/12/2022', 'Lolo', '07/02/2023', '19:00', 'si', 'Obra', '1/3', 1, 7, 1, 10, 'gran bono', 540, 200, 'pendiente');

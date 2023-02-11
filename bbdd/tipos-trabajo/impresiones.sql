@@ -2,6 +2,7 @@ CREATE TABLE impresiones (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -27,6 +28,7 @@ CREATE TABLE impresiones (
 INSERT INTO impresiones (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -44,23 +46,8 @@ INSERT INTO impresiones (
   entrega,
   estado
 ) VALUES 
-(1,1,'Jacinto', '01/03/2023', '19:00', 'no', 'pc pepo 5','doble','algun tipo de papel','oficio','vertical','si','si','no','que buen trabajo', 1400, 500, 'pendiente'),
-(1,2,'Jacinto', '01/03/2023', '19:00', 'no', 'pc android','simple','otro tipo de papel','A4','vertical','si','si','no','muy groso', 1400, 500, 'pendiente'),
-(1,3,'Jacinto', '01/03/2023', '19:00', 'no', 'pc apple','simple','papel re groso','A3','vertical','si','si','no','manso trabajo', 1400, 500, 'entregado'),
-(1,4,'Jacinto', '01/03/2023', '19:00', 'no', 'pc lenovo','doble','hipermega papel','A5','vertical','si','si','no','todo super genial', 1400, 500, 'enviar a proveedor'),
-(3,5,'Jacinto', '01/03/2023', '19:00', 'no', 'pc maru 4','simple','papel re groso','A3','apaisado','no','si','si','orden para foo fighters', 1400, 500, 'realizado');
-
-INSERT INTO impresiones (
-  id_cliente,
-  nro_orden,
-  ubicacion_archivo,
-  faz,
-  tipo_papel,
-  tamano_papel,
-  orientacion,
-  anillado,
-  abrochado,
-  corte,
-  observaciones
-) VALUES 
-(3,5,'pc maru 4','simple','papel re groso','A3','apaisado','no','si','si','orden para foo fighters', 'realizado');
+(1,1, '01/01/2023', 'Jacinto', '01/03/2023', '19:00', 'no', 'pc pepo 5','doble','algun tipo de papel','oficio','vertical','si','si','no','que buen trabajo', 1400, 500, 'pendiente'),
+(1,2, '01/01/2023', 'Jacinto', '01/03/2023', '19:00', 'no', 'pc android','simple','otro tipo de papel','A4','vertical','si','si','no','muy groso', 1400, 500, 'pendiente'),
+(1,3, '01/01/2023', 'Jacinto', '01/03/2023', '19:00', 'no', 'pc apple','simple','papel re groso','A3','vertical','si','si','no','manso trabajo', 1400, 500, 'entregado'),
+(1,4, '01/01/2023', 'Jacinto', '01/03/2023', '19:00', 'no', 'pc lenovo','doble','hipermega papel','A5','vertical','si','si','no','todo super genial', 1400, 500, 'enviar a proveedor'),
+(3,5, '01/01/2023', 'Jacinto', '01/03/2023', '19:00', 'no', 'pc maru 4','simple','papel re groso','A3','apaisado','no','si','si','orden para foo fighters', 1400, 500, 'realizado');

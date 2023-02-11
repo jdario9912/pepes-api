@@ -2,6 +2,7 @@ CREATE TABLE varios (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR (10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -20,6 +21,7 @@ CREATE TABLE varios (
 INSERT INTO varios (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -30,5 +32,5 @@ INSERT INTO varios (
   entrega,
   estado
 ) VALUES
-(3, 52, 'Jacinto', '13/04/2023', '19:00', 'si', 'Fotocopias color', '', 200, 200, 'pendiente'),
-(4, 53, 'Jacinto', '13/04/2023', '19:00', 'si', 'Fotocopias color', '', 200, 200, 'entregado');
+(3, 52, '09/01/2023', 'Jacinto', '13/04/2023', '19:00', 'si', 'Fotocopias color', '', 200, 200, 'pendiente'),
+(4, 53, '09/01/2023', 'Jacinto', '13/04/2023', '19:00', 'si', 'Fotocopias color', '', 200, 200, 'entregado');

@@ -2,6 +2,7 @@ CREATE TABLE tarjetas (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -24,6 +25,7 @@ CREATE TABLE tarjetas (
 INSERT INTO tarjetas (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -38,13 +40,13 @@ INSERT INTO tarjetas (
   entrega,
   estado
 ) VALUES
-(4, 33, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 1/0', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
-(4, 34, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/0', 200, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
-(4, 35, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/1', 1000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
-(4, 36, 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/4', 2000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
-(4, 37, 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/1', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
-(4, 38, 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/4', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
-(4, 39, 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X1', 1000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
-(4, 40, 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X2', 2000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'entregado'),
-(4, 41, 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X1', 100, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'entregado'),
-(4, 42, 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X2', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente');
+(4, 33, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 1/0', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
+(4, 34, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/0', 200, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
+(4, 35, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/1', 1000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
+(4, 36, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Laser 4/4', 2000, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'pendiente'),
+(4, 37, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/1', 100, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
+(4, 38, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', '1000 4/4', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'realizado'),
+(4, 39, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X1', 1000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente'),
+(4, 40, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Opp mate X2', 2000, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'entregado'),
+(4, 41, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X1', 100, 'Ilustracion', 'Perforado', 'si', '', 2000, 1000, 'entregado'),
+(4, 42, '08/01/2023', 'Pepo', '25/04/2023', '19:00', 'no', 'Uv sector X2', 200, 'Ilustracion', 'Corte', 'si', '', 2000, 1000, 'pendiente');

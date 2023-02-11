@@ -2,6 +2,7 @@ CREATE TABLE loma (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -27,6 +28,7 @@ CREATE TABLE loma (
 INSERT INTO loma (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -44,10 +46,10 @@ INSERT INTO loma (
   entrega,
   estado
 ) VALUES 
-(7, 6, 'Maru', '08/02/2023', '19:00', 'no', 'pc 15', 'Vinillo Brillo', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente'),
-(2, 7, 'Maru', '08/02/2023', '19:00', 'no', 'pc 1', 'Vinillo Mate', 'vertical', 'arriba', 'si', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'entregado'),
-(3, 8, 'Maru', '08/02/2023', '19:00', 'no', 'pc 4', 'Papel', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'enviar a proveedor'),
-(7, 9, 'Maru', '08/02/2023', '19:00', 'no', 'pc pepo', 'Lona Front', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'realizado'),
-(6, 10, 'Maru', '08/02/2023', '19:00', 'no', 'pc maru', 'Transparente', 'vertical', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente'),
-(6, 11, 'Maru', '08/02/2023', '19:00', 'no', 'pc principal', 'Lona Back', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'realizado'),
-(8, 12, 'Maru', '08/02/2023', '19:00', 'no', 'pc 4', 'Micro', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente');
+(7, 6, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc 15', 'Vinillo Brillo', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente'),
+(2, 7, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc 1', 'Vinillo Mate', 'vertical', 'arriba', 'si', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'entregado'),
+(3, 8, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc 4', 'Papel', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'enviar a proveedor'),
+(7, 9, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc pepo', 'Lona Front', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'realizado'),
+(6, 10, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc maru', 'Transparente', 'vertical', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente'),
+(6, 11, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc principal', 'Lona Back', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'realizado'),
+(8, 12, '02/01/2023', 'Maru', '08/02/2023', '19:00', 'no', 'pc 4', 'Micro', 'horizontal', 'no', 'no', 'si', 'si', 'no', 'no tiene', 3000, 1300, 'pendiente');

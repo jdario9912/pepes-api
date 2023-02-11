@@ -2,6 +2,7 @@ CREATE TABLE remeras (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -26,6 +27,7 @@ CREATE TABLE remeras (
 INSERT INTO remeras (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -42,6 +44,6 @@ INSERT INTO remeras (
   entrega,
   estado
 ) VALUES
-(1,30, 'Maru', '16/03/2023', '19:00', 'si', 'whatsapp', 'S, M y XL', 'Blanco', 'Batman', 'Robin', 'Negro', 20, 'al cuerpo', 12000, 3000, 'pendiente'),
-(2,31, 'Maru', '06/03/2023', '19:00', 'si', 'whatsapp', 'S, M y XL', 'Blanco', 'Batman', 'Robin', 'Negro', 20, 'sueltas', 12000, 3000, 'pendiente'),
-(3,32, 'Maru', '02/03/2023', '19:00', 'si', 'pc 3', 'M y XL', 'Blanco', 'Batman', 'Robin', 'Negro', 20, 'comun', 12000, 3000, 'enviar a proveedor');
+(1,30, '04/01/2023', 'Maru', '16/03/2023', '19:00', 'si', 'whatsapp', 'S, M y XL', 'Blanco', 'Batman', 'Robin', 'Negro', 20, 'al cuerpo', 12000, 3000, 'pendiente'),
+(2,31, '04/01/2023', 'Maru', '06/03/2023', '19:00', 'si', 'whatsapp', 'S, M y XL', 'Blanco', 'Batman', 'Robin', 'Negro', 20, 'sueltas', 12000, 3000, 'pendiente'),
+(3,32, '04/01/2023', 'Maru', '02/03/2023', '19:00', 'si', 'pc 3', 'M y XL', 'Blanco', 'Batman', 'Robin', 'Negro', 20, 'comun', 12000, 3000, 'enviar a proveedor');

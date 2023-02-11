@@ -2,6 +2,7 @@ CREATE TABLE plotter (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -24,6 +25,7 @@ CREATE TABLE plotter (
 INSERT INTO plotter (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -38,7 +40,7 @@ INSERT INTO plotter (
   entrega,
   estado
 ) VALUES
-(1, 26, 'Pepo', '09/02/23', '19:00', 'no', 'email', 'grande', 6097, 'autoadhesivo', 'pelado', 'pegajoso', 1000, 700, 'terminado'),
-(3, 27, 'Pepo', '09/02/23', '19:00', 'no', 'whatsapp', 'pequeño', 6097, 'termotransferible', 'pelado', 'luminoso', 1000, 700, 'entregado'),
-(1, 28, 'Pepo', '09/02/23', '19:00', 'no', 'pc 5', 'mediano', 6097, 'autoadhesivo', 'sin pelar', 'baboso', 1000, 700, 'pendiente'),
-(8, 29, 'Pepo', '09/02/23', '19:00', 'si', 'email', 'chico', 6097, 'termotransferible', 'pelado', 'espinoso', 1000, 700, 'pendiente');
+(1, 26, '03/01/2023', 'Pepo', '09/02/23', '19:00', 'no', 'email', 'grande', 6097, 'autoadhesivo', 'pelado', 'pegajoso', 1000, 700, 'terminado'),
+(3, 27, '03/01/2023', 'Pepo', '09/02/23', '19:00', 'no', 'whatsapp', 'pequeño', 6097, 'termotransferible', 'pelado', 'luminoso', 1000, 700, 'entregado'),
+(1, 28, '03/01/2023', 'Pepo', '09/02/23', '19:00', 'no', 'pc 5', 'mediano', 6097, 'autoadhesivo', 'sin pelar', 'baboso', 1000, 700, 'pendiente'),
+(8, 29, '03/01/2023', 'Pepo', '09/02/23', '19:00', 'si', 'email', 'chico', 6097, 'termotransferible', 'pelado', 'espinoso', 1000, 700, 'pendiente');

@@ -2,6 +2,7 @@ CREATE TABLE disenos (
   id INT(4) NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
   nro_orden INT NOT NULL,
+  fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
@@ -21,6 +22,7 @@ CREATE TABLE disenos (
 INSERT INTO disenos (
   id_cliente,
   nro_orden,
+  fecha_creacion,
   atendido_por,
   fecha_entrega,
   hora_entrega,
@@ -32,6 +34,6 @@ INSERT INTO disenos (
   entrega,
   estado
 ) VALUES
-(2, 23, 'Tomy', '11/03/2023', '19:00', 'si', 'whatsap', 'monos verdes', '', 200, 50, 'pendiente'),
-(7, 24, 'Laura', '11/03/2023', '19:00', 'si', 'whatsap', 'perros naranjas', '', 200, 50, 'realizado'),
-(5, 25, 'Vane', '11/03/2023', '19:00', 'si', 'whatsap', 'sapos comestibles', '', 200, 50, 'entregado');
+(2, 23, '30/12/2022', 'Tomy', '11/03/2023', '19:00', 'si', 'whatsap', 'monos verdes', '', 200, 50, 'pendiente'),
+(7, 24, '30/12/2022', 'Laura', '11/03/2023', '19:00', 'si', 'whatsap', 'perros naranjas', '', 200, 50, 'realizado'),
+(5, 25, '30/12/2022', 'Vane', '11/03/2023', '19:00', 'si', 'whatsap', 'sapos comestibles', '', 200, 50, 'entregado');
