@@ -26,9 +26,6 @@ const login = async (req, res) => {
     ;
 
     res.json({ mensaje: 'Login ok.', auth: true, permisions: true });
-
-    pool.end();
-
   } catch (error) {
     return res.status(500).json({ 
       mensaje: "Algo salio mal.",

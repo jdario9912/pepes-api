@@ -1,9 +1,10 @@
 const express = require('express');
 const routerClientes = express.Router();
-const { obtenerClientes, crearCliente } = require('../controllers/clientes.controller');
+const { obtenerClientes, obtenerCliente, crearCliente } = require('../controllers/clientes.controller');
 
 // GET
 routerClientes.get('/', obtenerClientes);
+routerClientes.get('/:id', obtenerCliente);
 
 // POST
 routerClientes.post('/', crearCliente);
