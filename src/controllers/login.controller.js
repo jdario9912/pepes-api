@@ -22,9 +22,12 @@ const login = async (req, res) => {
     };
 
     if(rows[0].permisions === 'user')
-      return res.json({ mensaje: 'Login ok.', auth: true, permisions: false });
+      return res.json({ mensaje: 'Login ok.', auth: true, permisions: false })
+    ;
 
     res.json({ mensaje: 'Login ok.', auth: true, permisions: true });
+
+    pool.end();
 
   } catch (error) {
     return res.status(500).json({ 

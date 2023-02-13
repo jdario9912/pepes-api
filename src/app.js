@@ -19,6 +19,7 @@ app.get("/", async (req, res) => {
     "SELECT 'Sistema para Pepes funcionando con base de datos' AS Mensaje"
   );
   res.json(rows[0]);
+  pool.end();
 });
 
 app.use((req, res, next) => {

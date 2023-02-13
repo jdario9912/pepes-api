@@ -4,14 +4,16 @@ const obtenerClientes = async (req, res) => {
   if(req.query.nombre){
     try {
       const [rows] = await pool.query(`SELECT * FROM clientes WHERE nombre LIKE '%${req.query.nombre}%'`);
-      return res.json(rows);
+      return res.json(rows) && pool.end();
     } catch (error) {
       return res.status(500).json({ mensaje: "Algo salio mal"});  
     }
   }
+
   try {
     const [rows] = await pool.query("SELECT * FROM clientes ORDER BY id DESC");
     res.json(rows);
+    pool.end();
   } catch (error) {
     return res.status(500).json({ mensaje: "Algo salio mal"});
   }
@@ -35,10 +37,8 @@ const crearCliente = async (req, res) => {
 
     console.log('filas devueltas', rows.length);
 
-    if(rows.length > 0)
-      return res.json({ mensaje: 'El cliente ya esta registrado'})
-    else
-      return res.json({ mensaje: 'No se encontraron registros con ese nombre'})
+    if(rows.length != 0)
+      return res.json({ mensaje: 'El cliente ya esta registrado'}) && pool.end();
     
     
   } catch (error) {

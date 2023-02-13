@@ -5,6 +5,7 @@ const obtenerEmpleados = async (req, res) => {
   try {
     const [rows] = await pool.query("SELECT * FROM empleados");
     res.json(rows);
+    pool.end();
   } catch (error) {
     return res.status(500).json({ mensaje: "Algo salio mal"});
   }
@@ -19,7 +20,7 @@ const obtenerEmpleado = async (req, res) => {
       [nickname],
     );
     if(rows.length > 0)
-      res.json(rows[0]);  
+      res.json(rows[0]) && pool.end();  
     else
       res.status(404).json({ mensaje: `El empleado ${nickname} no esta registrado`});
   } catch (error) {
@@ -41,6 +42,8 @@ const crearEmpleadoUser = async (req, res) => {
       res.send({ id: rows.insertId, nickname, email });
     else  
       res.send('No se pudo crear el registro');
+
+    pool.end();
   } catch (error) {
     return res.status(500).json({ mensaje: "Algo salio mal"});
   }
@@ -63,6 +66,8 @@ const actualizarEmpleado = async (req, res) => {
       return res.status(404).json({ mensaje: "Empleado no encontrado" });
 
     res.send(`El usuario ${nickname} ha sido actualizado correctamente`);
+
+    pool.end();
   } catch (error) {
     return res.status(500).json({ mensaje: "Algo salio mal"});
   }
@@ -80,7 +85,9 @@ const eliminarEmpleado = async (req, res) => {
     if(result.affectedRows == 1)
       res.sendStatus(204);
     else
-      res.status(404).json({ mensaje: `No se pudo eliminar el empleado ${id}`})
+      res.status(404).json({ mensaje: `No se pudo eliminar el empleado ${id}`});
+
+    pool.end();
   } catch (error) {
     return res.status(500).json({ mensaje: "Algo salio mal"});
   }
