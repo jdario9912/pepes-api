@@ -1,4 +1,5 @@
 const pool = require('../db');
+const { msjError } = require('../models/mjs.error');
 
 // POST
 const login = async (req, res) => {
@@ -27,10 +28,7 @@ const login = async (req, res) => {
 
     res.json({ mensaje: 'Login ok.', auth: true, permisions: true });
   } catch (error) {
-    return res.status(500).json({ 
-      mensaje: "Algo salio mal.",
-      error: error
-    });
+    return res.status(500).json(msjError);
   }
 };
 
