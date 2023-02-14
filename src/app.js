@@ -5,6 +5,7 @@ const pool = require('./db');
 const routerEmpleados = require('./routes/empleados.routes');
 const routerLogin = require("./routes/login.routes");
 const routerClientes = require("./routes/clientes.routes");
+const routerBusqueda = require("./routes/busqueda.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use('/api/empleados', routerEmpleados);
 app.use('/api/login', routerLogin);
 app.use('/api/clientes', routerClientes);
+app.use('/api/busqueda', routerBusqueda);
 
 app.get("/", async (req, res) => {
   const [rows] = await pool.query(
