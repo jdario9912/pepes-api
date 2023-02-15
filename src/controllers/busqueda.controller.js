@@ -11,10 +11,10 @@ const obtenerBusqueda = async (req, res) => {
       );
 
       if(rows.length == 0)
-        return res.status(404).json('No se encontraron resultados')
+        return res.status(404).json({ mensaje: 'No se encontraron resultados'})
       ;
       
-      res.json({ numero: false, resultados: rows });   
+      res.json({ numero: false, resultados: rows, mensaje: false });   
     } catch (error) {
       console.log(error);
       return res.status(500).json(msjError);
@@ -30,7 +30,7 @@ const obtenerBusqueda = async (req, res) => {
       if(ordenes.length == 0)
         return res.status(404).json({mensaje: `La orden ${busqueda} no existe`})
       
-      res.json({ numero: true, resultados: ordenes[0][0] });
+      res.json({ numero: true, resultados: ordenes[0][0], mensaje: false });
     } catch (error) {
       console.log(error);
       return res.status(500).json(msjError);  
