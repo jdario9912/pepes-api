@@ -13,7 +13,7 @@ const obtenerBusqueda = async (req, res) => {
       if(rows.length == 0)
         return res.status(404).json('No se encontraron resultados');
 
-      res.json(rows);   
+      res.json({ numero: false, resultados: rows });   
     } catch (error) {
       console.log(error);
       return res.status(500).json(msjError);
@@ -24,11 +24,12 @@ const obtenerBusqueda = async (req, res) => {
         `CALL buscar_orden_por_numero(${busqueda})`
         );
         
-        // if(filas == 0)
-        //   return res.status(404).json('No se encontró la orden')
-        // ;
-        
-      res.send(filas);
+      const ordenes = filas.filter(fila => fila.length > 0);
+
+      if(ordenes.length == 0)
+        return res.status(404).json({mensaje: `La orden ${busqueda} no existe`})
+      
+      res.json({ numero: true, resultados: ordenes[0][0] });
     } catch (error) {
       console.log(error);
       return res.status(500).json(msjError);  
