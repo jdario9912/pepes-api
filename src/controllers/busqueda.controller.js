@@ -11,8 +11,9 @@ const obtenerBusqueda = async (req, res) => {
       );
 
       if(rows.length == 0)
-        return res.status(404).json('No se encontraron resultados');
-
+        return res.status(404).json('No se encontraron resultados')
+      ;
+      
       res.json({ numero: false, resultados: rows });   
     } catch (error) {
       console.log(error);
