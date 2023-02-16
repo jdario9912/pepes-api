@@ -7,7 +7,7 @@ CREATE TABLE disenos (
   fecha_entrega VARCHAR(10),
   hora_entrega VARCHAR(6),
   muestra VARCHAR(2),
-  tipo_trabajo VARCHAR(20) DEFAULT 'disenos',
+  tipo_trabajo VARCHAR(20) DEFAULT 'diseños',
   ubicacion_archivo VARCHAR(100),
   detalles VARCHAR(255),
   observaciones VARCHAR(255),

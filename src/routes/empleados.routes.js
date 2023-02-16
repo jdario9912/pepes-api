@@ -2,6 +2,8 @@ const express = require('express');
 const routerEmpleados = express.Router();
 const { obtenerEmpleados, obtenerEmpleado, crearEmpleadoUser, actualizarEmpleado, eliminarEmpleado } = require('../controllers/empleados.controller');
 
+routerEmpleados.use(express.json());
+
 // GET
 routerEmpleados.get('/', obtenerEmpleados);
 routerEmpleados.get('/:nickname', obtenerEmpleado);
