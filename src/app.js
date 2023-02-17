@@ -7,6 +7,7 @@ const routerLogin = require("./routes/login.routes");
 const routerClientes = require("./routes/clientes.routes");
 const routerBusqueda = require("./routes/busqueda.routes");
 const routerOrdenesPendientes = require("./routes/ordenes.pendientes.routes");
+const routerImpresiones = require("./routes/impresiones.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -17,6 +18,7 @@ app.use('/api/login', routerLogin);
 app.use('/api/clientes', routerClientes);
 app.use('/api/busqueda', routerBusqueda);
 app.use('/api/ordenes-pendientes', routerOrdenesPendientes);
+app.use('/api/impresiones', routerImpresiones);
 
 app.get("/", async (req, res) => {
   const [rows] = await pool.query(
