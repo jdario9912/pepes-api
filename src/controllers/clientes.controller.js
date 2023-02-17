@@ -23,7 +23,7 @@ const obtenerCliente = async (req, res) => {
   
   try {
     const [rows] = await pool.query(
-      `SELECT nombre, telefono, email, observaciones FROM clientes WHERE id = ?`,
+      `SELECT * FROM clientes WHERE id = ?`,
       [idCliente]
     );
   
@@ -40,7 +40,6 @@ const obtenerCliente = async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-
 };
 
 const crearCliente = async (req, res) => {
