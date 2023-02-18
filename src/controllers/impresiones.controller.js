@@ -7,7 +7,7 @@ const crearOrden = async (req, res) => {
   const datos = [fecha_entrega, hora_entrega, muestra, ubicacion_archivo, faz, tipo_papel, tamano_papel, orientacion, anillado, abrochado, corte, total, entrega, estado];
   
   datos.forEach(element => {
-    if(element === '') return res.json({ registro: false, mensaje: `La detalle ${element} esta sin completar` });
+    if(element === '') return res.json({ registro: false, mensaje: `Hay campos sin completar` });
   });
 
   try {
