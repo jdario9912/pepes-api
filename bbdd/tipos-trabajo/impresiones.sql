@@ -1,6 +1,6 @@
 CREATE TABLE impresiones (
-  id INT(4) NOT NULL AUTO_INCREMENT,
-  id_cliente INT(5) NOT NULL,
+  id INT NOT NULL AUTO_INCREMENT,
+  id_cliente INT NOT NULL,
   nro_orden BIGINT NOT NULL,
   fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),

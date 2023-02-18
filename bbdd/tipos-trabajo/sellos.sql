@@ -1,7 +1,7 @@
 CREATE TABLE sellos (
-  id INT(4) NOT NULL AUTO_INCREMENT,
+  id INT NOT NULL AUTO_INCREMENT,
   id_cliente INT NOT NULL,
-  nro_orden INT NOT NULL,
+  nro_orden BIGINT NOT NULL,
   fecha_creacion VARCHAR(10),
   atendido_por VARCHAR(50),
   fecha_entrega VARCHAR(10),
