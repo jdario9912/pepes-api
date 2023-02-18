@@ -1,3 +1,1 @@
-const msjError = {mensaje: "Algo salio mal."};
-
-module.exports = msjError;
+module.exports = msjError = {mensaje: "Algo salio mal."};

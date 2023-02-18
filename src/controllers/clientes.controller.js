@@ -75,16 +75,18 @@ const crearCliente = async (req, res) => {
       const [idCliente] = await pool.query(
         `SELECT id FROM clientes WHERE nombre = ?`,
         [nombre]
-      )
+      );
+
       res.json({ 
         mensaje: 'Cliente registrado!',
         clienteRegistrado: true,
         idCliente: idCliente[0].id
-      })
+      });
     } else  
       res.json({ 
         mensaje: 'Algo salió mal',
-        clienteRegistrado: false})
+        clienteRegistrado: false
+      });
     ;
   } catch (error) {
     console.log(error);
