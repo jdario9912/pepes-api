@@ -12,10 +12,12 @@ const obtenerOrdenesPendientes = async (req, res) => {
     const ordenesPendientes = rows.filter(row => row.length > 0);
 
     if(ordenesPendientes.length == 0)
-      return res.status(404).json({ mensaje: `${nombre} no tiene ordenes pendientes.`});
+      return res.status(404).json({ mensaje: `${nombre} no tiene ordenes pendientes.`})
+    ;
 
     res.send(ordenesPendientes[0]);
   } catch (error) {
+    console.log(error);
     return msjError;
   }
 }
