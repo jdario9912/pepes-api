@@ -3,67 +3,67 @@
 DELIMITER $$
 CREATE PROCEDURE buscar_ordenes_pendientes()
 BEGIN
-SELECT impresiones.nro_orden as Orden, clientes.nombre as Cliente, impresiones.tipo_trabajo as Tipo, impresiones.fecha_entrega as Fecha, impresiones.hora_entrega as Hora
+SELECT impresiones.id, impresiones.nro_orden, clientes.nombre, impresiones.fecha_creacion, impresiones.tipo_trabajo, impresiones.fecha_entrega, impresiones.hora_entrega
 FROM clientes
 INNER JOIN impresiones
 ON clientes.id = impresiones.id_cliente
 WHERE impresiones.estado = 'pendiente';
 
-SELECT loma.nro_orden as Orden, clientes.nombre as Cliente, loma.tipo_trabajo as Tipo, loma.fecha_entrega as Fecha, loma.hora_entrega as Hora
+SELECT loma.id, loma.nro_orden, clientes.nombre, loma.fecha_creacion, loma.tipo_trabajo, loma.fecha_entrega, loma.hora_entrega
 FROM clientes
 INNER JOIN loma
 ON clientes.id = loma.id_cliente
 WHERE loma.estado = 'pendiente';
 
-SELECT talonarios.nro_orden as Orden, clientes.nombre as Cliente, talonarios.tipo_trabajo as Tipo, talonarios.fecha_entrega as Fecha, talonarios.hora_entrega as Hora
+SELECT talonarios.id, talonarios.nro_orden, clientes.nombre, talonarios.fecha_creacion, talonarios.tipo_trabajo, talonarios.fecha_entrega, talonarios.hora_entrega
 FROM clientes
 INNER JOIN talonarios
 ON clientes.id = talonarios.id_cliente
 WHERE talonarios.estado = 'pendiente';
 
-SELECT bonos.nro_orden as Orden, clientes.nombre as Cliente, bonos.tipo_trabajo as Tipo, bonos.fecha_entrega as Fecha, bonos.hora_entrega as Hora
+SELECT bonos.id, bonos.nro_orden, clientes.nombre, bonos.fecha_creacion, bonos.tipo_trabajo, bonos.fecha_entrega, bonos.hora_entrega
 FROM clientes
 INNER JOIN bonos
 ON clientes.id = bonos.id_cliente
 WHERE bonos.estado = 'pendiente';
 
-SELECT disenos.nro_orden as Orden, clientes.nombre as Cliente, disenos.tipo_trabajo as Tipo, disenos.fecha_entrega as Fecha, disenos.hora_entrega as Hora
+SELECT disenos.id, disenos.nro_orden, clientes.nombre, disenos.fecha_creacion, disenos.tipo_trabajo, disenos.fecha_entrega, disenos.hora_entrega
 FROM clientes
 INNER JOIN disenos
 ON clientes.id = disenos.id_cliente
 WHERE disenos.estado = 'pendiente';
 
-SELECT plotter.nro_orden as Orden, clientes.nombre as Cliente, plotter.tipo_trabajo as Tipo, plotter.fecha_entrega as Fecha, plotter.hora_entrega as Hora
+SELECT plotter.id, plotter.nro_orden, clientes.nombre, plotter.fecha_creacion, plotter.tipo_trabajo, plotter.fecha_entrega, plotter.hora_entrega
 FROM clientes
 INNER JOIN plotter
 ON clientes.id = plotter.id_cliente
 WHERE plotter.estado = 'pendiente';
 
-SELECT remeras.nro_orden as Orden, clientes.nombre as Cliente, remeras.tipo_trabajo as Tipo, remeras.fecha_entrega as Fecha, remeras.hora_entrega as Hora
+SELECT remeras.id, remeras.nro_orden, clientes.nombre, remeras.fecha_creacion, remeras.tipo_trabajo, remeras.fecha_entrega, remeras.hora_entrega
 FROM clientes
 INNER JOIN remeras
 ON clientes.id = remeras.id_cliente
 WHERE remeras.estado = 'pendiente';
 
-SELECT tarjetas.nro_orden as Orden, clientes.nombre as Cliente, tarjetas.tipo_trabajo as Tipo, tarjetas.fecha_entrega as Fecha, tarjetas.hora_entrega as Hora
+SELECT tarjetas.id, tarjetas.nro_orden, clientes.nombre, tarjetas.fecha_creacion, tarjetas.tipo_trabajo, tarjetas.fecha_entrega, tarjetas.hora_entrega
 FROM clientes
 INNER JOIN tarjetas
 ON clientes.id = tarjetas.id_cliente
 WHERE tarjetas.estado = 'pendiente';
 
-SELECT volantes.nro_orden as Orden, clientes.nombre as Cliente, volantes.tipo_trabajo as Tipo, volantes.fecha_entrega as Fecha, volantes.hora_entrega as Hora
+SELECT volantes.id, volantes.nro_orden, clientes.nombre, volantes.fecha_creacion, volantes.tipo_trabajo, volantes.fecha_entrega, volantes.hora_entrega
 FROM clientes
 INNER JOIN volantes
 ON clientes.id = volantes.id_cliente
 WHERE volantes.estado = 'pendiente';
 
-SELECT sellos.nro_orden as Orden, clientes.nombre as Cliente, sellos.tipo_trabajo as Tipo, sellos.fecha_entrega as Fecha, sellos.hora_entrega as Hora
+SELECT sellos.id, sellos.nro_orden, clientes.nombre, sellos.fecha_creacion, sellos.tipo_trabajo, sellos.fecha_entrega, sellos.hora_entrega
 FROM clientes
 INNER JOIN sellos
 ON clientes.id = sellos.id_cliente
 WHERE sellos.estado = 'pendiente';
 
-SELECT varios.nro_orden as Orden, clientes.nombre as Cliente, varios.tipo_trabajo as Tipo, varios.fecha_entrega as Fecha, varios.hora_entrega as Hora
+SELECT varios.id, varios.nro_orden, clientes.nombre, varios.fecha_creacion, varios.tipo_trabajo, varios.fecha_entrega, varios.hora_entrega
 FROM clientes
 INNER JOIN varios
 ON clientes.id = varios.id_cliente

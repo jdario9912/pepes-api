@@ -1,5 +1,6 @@
 const pool = require('../db');
 const { msjError } = require('../models/mjs.error');
+const invertirFecha = require('../services/ordenes.pendientes.service');
 
 const obtenerOrdenesPendientes = async (req, res) => {
   const { idCliente, nombre } = req.params;
@@ -22,4 +23,22 @@ const obtenerOrdenesPendientes = async (req, res) => {
   }
 }
 
-module.exports = obtenerOrdenesPendientes;
+const buscarOrdenesPendientes = async (req, res) => {
+  try {
+    const [rows] = await pool.query(
+      `CALL buscar_ordenes_pendientes()`
+    )
+    
+    rows.pop();
+    
+    res.send(rows.flat().sort((a, b) => invertirFecha(a.fecha_entrega) - invertirFecha(b.fecha_entrega)));
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ mensaje: 'algo salio mal'})
+  }
+}
+
+module.exports = {
+  obtenerOrdenesPendientes,
+  buscarOrdenesPendientes
+}
