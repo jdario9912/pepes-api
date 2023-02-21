@@ -1,7 +1,7 @@
 -- ESTE PROCEDURE BUSCA UNA ORDEN SEGUN NUMERO DE ORDEN
 
 DELIMITER $$
-CREATE PROCEDURE buscar_orden_por_numero(IN nro_orden INT(10))
+CREATE PROCEDURE buscar_orden_por_numero(IN nro_orden BIGINT(15))
 BEGIN
 SELECT impresiones.nro_orden as Orden, clientes.nombre as Cliente, impresiones.atendido_por as 'Atendido por', impresiones.fecha_creacion as Creado, impresiones.estado as Estado, impresiones.tipo_trabajo as Tipo, impresiones.fecha_entrega as Fecha, impresiones.hora_entrega as Hora
 FROM clientes
