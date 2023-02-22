@@ -9,7 +9,7 @@ const actualizarEstadoOrden = async (req, res) => {
     );
 
     if(row.affectedRows == 0)
-      res.json({actualizado: false, mensaje: `No se pudo actualizar la orden ${nro_orden}`});
+      return res.json({actualizado: false, mensaje: `No se pudo actualizar la orden ${nro_orden}`});
 
     res.json({actualizado: true, mensaje: null});
   } catch (error) {
