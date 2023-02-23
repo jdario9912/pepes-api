@@ -1,6 +1,6 @@
 const pool = require('../db');
 const { msjError } = require('../models/mjs.error');
-const invertirFecha = require('../services/ordenes.pendientes.service');
+const invertirFecha = require('../services/fechas.service');
 
 const obtenerOrdenesPendientes = async (req, res) => {
   const { idCliente, nombre } = req.params;
