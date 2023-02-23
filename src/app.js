@@ -9,6 +9,7 @@ const routerBusqueda = require("./routes/busqueda.routes");
 const routerOrdenesPendientes = require("./routes/ordenes.pendientes.routes");
 const routerImpresiones = require("./routes/impresiones.routes");
 const routerActualizarEstadoOrden = require("./routes/actualizar.estado.orden");
+const routerLoma = require("./routes/loma.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -20,6 +21,7 @@ app.use('/api/clientes', routerClientes);
 app.use('/api/busqueda', routerBusqueda);
 app.use('/api/ordenes-pendientes', routerOrdenesPendientes);
 app.use('/api/impresiones', routerImpresiones);
+app.use('/api/loma', routerLoma);
 app.use('/api/actualizar-estado-orden', routerActualizarEstadoOrden);
 
 app.get("/", async (req, res) => {
