@@ -11,6 +11,7 @@ const routerImpresiones = require("./routes/impresiones.routes");
 const routerActualizarEstadoOrden = require("./routes/actualizar.estado.orden.routes");
 const routerLoma = require("./routes/loma.routes");
 const routerTalonarios = require("./routes/talonarios.routes");
+const routerBonos = require("./routes/bonos.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -24,6 +25,7 @@ app.use('/api/ordenes-pendientes', routerOrdenesPendientes);
 app.use('/api/impresiones', routerImpresiones);
 app.use('/api/loma', routerLoma);
 app.use('/api/talonarios', routerTalonarios);
+app.use('/api/bonos', routerBonos);
 app.use('/api/actualizar-estado-orden', routerActualizarEstadoOrden);
 
 app.get("/", async (req, res) => {
