@@ -13,6 +13,7 @@ const routerLoma = require("./routes/loma.routes");
 const routerTalonarios = require("./routes/talonarios.routes");
 const routerBonos = require("./routes/bonos.routes");
 const routerDisenos = require("./routes/disenos.routes");
+const routerPlotter = require("./routes/plotter.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -28,6 +29,7 @@ app.use('/api/loma', routerLoma);
 app.use('/api/talonarios', routerTalonarios);
 app.use('/api/bonos', routerBonos);
 app.use('/api/disenos', routerDisenos);
+app.use('/api/plotter', routerPlotter);
 app.use('/api/actualizar-estado-orden', routerActualizarEstadoOrden);
 
 app.get("/", async (req, res) => {
