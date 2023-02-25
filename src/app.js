@@ -15,6 +15,7 @@ const routerBonos = require("./routes/bonos.routes");
 const routerDisenos = require("./routes/disenos.routes");
 const routerPlotter = require("./routes/plotter.routes");
 const routerRemeras = require("./routes/remeras.routes");
+const routerTarjetas = require("./routes/tarjetas.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -32,6 +33,7 @@ app.use('/api/bonos', routerBonos);
 app.use('/api/disenos', routerDisenos);
 app.use('/api/plotter', routerPlotter);
 app.use('/api/remeras', routerRemeras);
+app.use('/api/tarjetas', routerTarjetas);
 app.use('/api/actualizar-estado-orden', routerActualizarEstadoOrden);
 
 app.get("/", async (req, res) => {
