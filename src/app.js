@@ -19,6 +19,7 @@ const routerTarjetas = require("./routes/tarjetas.routes");
 const routerVolantes = require("./routes/volantes.routes");
 const routerSellos = require("./routes/sellos.routes");
 const routerVarios = require("./routes/varios.routes");
+const routerPedido = require("./routes/pedido.routes");
 
 app.use(cors());
 app.use(express.json());
@@ -40,6 +41,7 @@ app.use('/api/tarjetas', routerTarjetas);
 app.use('/api/volantes', routerVolantes);
 app.use('/api/sellos', routerSellos);
 app.use('/api/varios', routerVarios);
+app.use('/api/pedido', routerPedido);
 app.use('/api/actualizar-estado-orden', routerActualizarEstadoOrden);
 
 app.get("/", async (req, res) => {
