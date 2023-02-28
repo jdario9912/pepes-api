@@ -34,10 +34,10 @@ const crearOrden = async (req, res) => {
       (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`, 
       datos);
 
-      if (rows.affectedRows == 1)
-        return res.json({ registro: true, mensaje: `Se registró la orden ${nro_orden}` });
-      else
-        return res.json({ registro: false, mensaje: `No se pudo registrar la orden n=${nro_orden}`});
+    if (rows.affectedRows == 1)
+      return res.json({ registro: true, mensaje: `Se registró la orden ${nro_orden}`, nro_orden });
+    else
+      return res.json({ registro: false, mensaje: `No se pudo registrar la orden n=${nro_orden}`});
 
   } catch (error) {
     handleError(error, res, mjsError);

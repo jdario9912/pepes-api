@@ -8,7 +8,7 @@ const buscarPedido = async (req, res) => {
      
   try {
     const [filas] = await pool.query(
-      `CALL buscar_pedido(${numero})`
+      `CALL buscar_pedido(${parseInt(numero)})`
       );
       
     const pedido = filas.filter(fila => fila.length > 0);
