@@ -19,17 +19,3 @@ VALUES
 ('Metallica', '351-336794', 'metallica@gmail.com', 'heavy-metal'),
 ('Carajo', '351-213365', 'carajo@gmail.com', 'heavy-metal'),
 ('Arjona', '351-127958', 'arjona@gmail.com', 'lentos');
-
-
-DELIMITER $$
-
-DELIMITER $$
-CREATE PROCEDURE ordenes_pendientes(IN id INT(2))
-BEGIN
-    SELECT id_cliente, nro_orden, tipo_trabajo, estado FROM remeras WHERE id_cliente = id AND estado = 'pendiente';
-    SELECT id_cliente, nro_orden, tipo_trabajo, estado FROM loma WHERE id_cliente = id AND estado = 'pendiente';
-END$$
-
-DELIMITER ;
-
-CALL ordenes_pendientes();

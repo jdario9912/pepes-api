@@ -10,8 +10,10 @@ CREATE TABLE empleados (
 INSERT INTO empleados 
   (nickname, email, password, permisions) 
 VALUES 
-  ('pepo', 'pepo@gmail.com', 'admin', 'admin'),
-  ('maru', 'maru@gmail.com', 'user', 'user'),
-  ('joel', 'joel@gmail.com', 'user', 'user'),
-  ('eli', 'eli@gmail.com', 'user', 'user')
+  ('pepo', 'pepoquevedo@gmail.com', 'admin', 'admin'),
+  ('maru', '', 'user', 'user'),
+  ('joel', 'joeldario9912@gmail.com', 'user', 'user'),
+  ('caro', '', 'user', 'user'),
+  ('candela', '', 'user', 'user'),
+  ('gustavo', '', 'user', 'user'),
 ;
