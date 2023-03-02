@@ -1,10 +1,16 @@
 const express = require('express');
-const { crearOrden } = require('../controllers/bonos.controller');
-const bonosRouter = express.Router();
+const { crearOrden, obtenerOrden, actualizarOrden } = require('../controllers/bonos.controller');
+const routerBonos = express.Router();
 
-bonosRouter.use(express.json());
+routerBonos.use(express.json());
 
 // POST
-bonosRouter.post('/', crearOrden);
+routerBonos.post('/', crearOrden);
 
-module.exports = bonosRouter;
+// GET
+routerBonos.get('/:nro', obtenerOrden);
+
+// PATCH
+routerBonos.patch('/', actualizarOrden);
+
+module.exports = routerBonos;

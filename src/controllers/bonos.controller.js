@@ -44,6 +44,31 @@ const crearOrden = async (req, res) => {
   }
 };
 
+const obtenerOrden = async (req, res) => {
+  const { nro } = req.params;
+
+  try {
+    const [rows] = await pool.query(`SELECT * FROM bonos WHERE nro_orden = ${nro}`);
+  
+    if (rows.length == 0) return res.json({ 
+      busqueda: false, 
+      data: false, 
+      mensaje: 'No se encontraron resultados'
+    });
+
+    res.json({ busqueda: true, data: rows[0], mensaje: 'Pedido encontrado' });
+  } catch (error) {
+    console.log(error);
+    handleError(error, res, mjsError);
+  }
+};
+
+const actualizarOrden = async (req, res) => {
+  
+};
+
 module.exports = {
-  crearOrden
+  crearOrden,
+  obtenerOrden,
+  actualizarOrden
 }
