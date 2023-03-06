@@ -1,19 +1,22 @@
 const pool = require('../db');
 
 const obtenerClientes = async (req, res) => {
-  if(req.query.nombre){
-    try {
-      const [rows] = await pool.query(`SELECT * FROM clientes WHERE nombre LIKE '%${req.query.nombre}%'`);
-      return res.json(rows);
-    } catch (error) {
-      return res.status(500).json({ mensaje: "Algo salio mal"});  
-    }
-  }
+  // if(req.query.nombre){
+  //   try {
+  //     const [rows] = await pool.query(`SELECT * FROM clientes WHERE nombre LIKE '%${req.query.nombre}%'`);
+  //     return res.json(rows);
+  //   } catch (error) {
+  //     console.log(error);
+  //     return res.status(500).json({ mensaje: "Algo salio mal"});  
+  //   }
+  // }
 
   try {
-    const [rows] = await pool.query("SELECT * FROM clientes ORDER BY id DESC");
-    res.json(rows);
+    const [rows] = await pool.query("SELECT * FROM clientes");
+
+    res.json(rows.sort((a, b) => a.nombre.localeCompare(b.nombre)));
   } catch (error) {
+    console.log(error);
     return res.status(500).json({ mensaje: "Algo salio mal"});
   }
 };
