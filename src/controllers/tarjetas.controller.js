@@ -2,6 +2,7 @@ const pool = require('../db');
 const mjsError = require('../models/mjs.error');
 const camposVacios = require('../services/valida.campos');
 const handleError = require('../services/handleError');
+const { parsearValoresTaretas } = require('../services/parseo.valores');
 
 const crearOrden = async (req, res) => {
   const { id_cliente, nro_orden, fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, tipo, cantidad, papel, terminacion, puntas_redondeadas, observaciones, total, entrega, estado } = req.body;
@@ -64,7 +65,36 @@ const obtenerOrden = async (req, res) => {
 };
 
 const actualizarOrden = async (req, res) => {
-  
+  const values = Object.values(req.body);
+
+  try {
+    const [rows] = await pool.query(
+      `UPDATE tarjetas
+       SET
+       fecha_entrega = ?,
+       hora_entrega = ?,
+       muestra = ?,
+       tipo = ?,
+       cantidad = ?,
+       papel = ?,
+       otra_terminacion = ?,
+       puntas_redondeadas = ?,
+       observaciones = ?,
+       total = ?,
+       entrega = ?
+        WHERE nro_orden = ?`,
+      parsearValoresTaretas(values)
+    );
+
+    if(rows.affectedRows == 0) 
+      return res.json({ actualizado: false, mensaje: `No se pudo actualizar el pedido`})
+    ;
+
+    res.json({ actualizado: true, mensaje: null});
+  } catch (error) {
+    console.log(error);
+    handleError(error, res, mjsError);
+  }
 };
 
 module.exports = {

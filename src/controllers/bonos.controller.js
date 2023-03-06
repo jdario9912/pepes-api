@@ -84,7 +84,7 @@ const actualizarOrden = async (req, res) => {
         total = ?,
         entrega = ?
         WHERE nro_orden = ?`,
-        parsearValoresBonos(values)
+      parsearValoresBonos(values)
     );
 
     if(rows.affectedRows == 0) 
