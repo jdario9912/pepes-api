@@ -65,7 +65,7 @@ const actualizarOrden = async (req, res) => {
 
   try {
     const [rows] = await pool.query(
-      `UPDATE bonos
+      `UPDATE varios
        SET
        fecha_entrega = ?,
        hora_entrega = ?,

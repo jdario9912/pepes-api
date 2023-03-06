@@ -77,7 +77,7 @@ const actualizarOrden = async (req, res) => {
        hora_entrega = ?,
        muestra = ?,
        ubicacion_archivo = ?,
-       talle = ?,
+       talles = ?,
        color = ?,
        estampa_pecho = ?,
        estampa_espalda = ?,

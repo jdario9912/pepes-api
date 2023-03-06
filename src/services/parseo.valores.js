@@ -27,7 +27,7 @@ const parsearValoresDisenos = (valores) => {
 const parsearValoresImpresiones = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 9 || i == 10 || i == 11) {
+    if (i == 12 || i == 13 || i == 14) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
