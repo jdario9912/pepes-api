@@ -13,6 +13,8 @@ const obtenerOrdenesCliente = async (req, res) => {
 
     rows.pop();
 
+    if(rows.length == 0) return res.json({mensaje: 'El cliente no tiene ordenes'});
+
     res.send(rows.flat());
   } catch (error) {
     handleError(error, res, mjsError);
