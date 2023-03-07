@@ -5,8 +5,8 @@ const camposVacios = require('../services/valida.campos');
 const { parsearValoresLoma } = require('../services/parseo.valores');
 
 const crearOrden = async (req, res) => {
-  const {id_cliente, nro_orden, fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, material, orientacion, bolsillo, corte, ojales, troquelado, portabaner, observaciones, total, entrega, estado} = req.body;
-  const datos = [parseInt(id_cliente), parseInt(nro_orden), fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, material, orientacion, bolsillo, corte, ojales, troquelado, portabaner, observaciones, parseInt(total), parseInt(entrega), estado];
+  const {id_cliente, nro_orden, fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, material, orientacion, bolsillo, corte, ojales, troquelado, portabaner, observaciones, total, entrega, estado, abono} = req.body;
+  const datos = [parseInt(id_cliente), parseInt(nro_orden), fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, material, orientacion, bolsillo, corte, ojales, troquelado, portabaner, observaciones, parseInt(total), parseInt(entrega), estado, abono];
   const campos = [fecha_entrega, hora_entrega, muestra, ubicacion_archivo, orientacion, corte, ojales, troquelado, portabaner];
 
   if(camposVacios(campos)) return res.json({ registrado: false, mensaje: 'Hay datos sin completar'});
@@ -32,9 +32,10 @@ const crearOrden = async (req, res) => {
         observaciones,
         total,
         entrega,
-        estado
+        estado,
+        abono
       ) VALUES 
-      (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+      (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
       datos
     );
 
@@ -87,7 +88,8 @@ const actualizarOrden = async (req, res) => {
        portabaner = ?,
        observaciones = ?,
        total = ?,
-       entrega = ?
+       entrega = ?,
+       abono = ?
         WHERE nro_orden = ?`,
       parsearValoresLoma(values)
     );

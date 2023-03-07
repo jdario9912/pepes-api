@@ -5,8 +5,8 @@ const handleError = require('../services/handleError');
 const { parsearValoresImpresiones } = require('../services/parseo.valores');
 
 const crearOrden = async (req, res) => {
-  const { id_cliente, nro_orden, fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, faz, tipo_papel, tamano_papel, orientacion, anillado, abrochado, corte, observaciones, total, entrega, estado } = req.body;
-  const datos = [parseInt(id_cliente), parseInt(nro_orden), fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, faz, tipo_papel, tamano_papel, orientacion, anillado, abrochado, corte, observaciones, parseInt(total), parseInt(entrega), estado];
+  const { id_cliente, nro_orden, fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, faz, tipo_papel, tamano_papel, orientacion, anillado, abrochado, corte, observaciones, total, entrega, estado, abono } = req.body;
+  const datos = [parseInt(id_cliente), parseInt(nro_orden), fecha_creacion, atendido_por, fecha_entrega, hora_entrega, muestra, ubicacion_archivo, faz, tipo_papel, tamano_papel, orientacion, anillado, abrochado, corte, observaciones, parseInt(total), parseInt(entrega), estado, abono];
   const campos = [fecha_entrega, hora_entrega, muestra, ubicacion_archivo, faz, tipo_papel, tamano_papel, orientacion, anillado, abrochado, corte, total, entrega];
   
   if(camposVacios(campos)) return res.json({ registrado: false, mensaje: 'Hay datos sin completar'});
@@ -87,7 +87,8 @@ const actualizarOrden = async (req, res) => {
        corte = ?,
        observaciones = ?,
        total = ?,
-       entrega = ?
+       entrega = ?,
+       abono = ?
         WHERE nro_orden = ?`,
       parsearValoresImpresiones(values)
     );

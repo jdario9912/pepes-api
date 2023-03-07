@@ -1,0 +1,11 @@
+alter table bonos add abono varchar(18);
+alter table disenos add abono varchar(18);
+alter table impresiones add abono varchar(18);
+alter table loma add abono varchar(18);
+alter table plotter add abono varchar(18);
+alter table remeras add abono varchar(18);
+alter table sellos add abono varchar(18);
+alter table talonarios add abono varchar(18);
+alter table tarjetas add abono varchar(18);
+alter table varios add abono varchar(18);
+alter table volantes add abono varchar(18);

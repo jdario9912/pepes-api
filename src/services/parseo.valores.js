@@ -1,7 +1,7 @@
 const parsearValoresBonos = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 5 || i == 6 || i == 7 || i == 8 || i == 10 || i == 11 ||  i == 12) {
+    if (i == 5 || i == 6 || i == 7 || i == 8 || i == 10 || i == 11 ||  i == 13) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -14,7 +14,7 @@ const parsearValoresBonos = (valores) => {
 const parsearValoresDisenos = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 6 || i == 7 || i == 8) {
+    if (i == 6 || i == 7 || i == 9) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -27,7 +27,7 @@ const parsearValoresDisenos = (valores) => {
 const parsearValoresImpresiones = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 12 || i == 13 || i == 14) {
+    if (i == 12 || i == 13 || i == 15) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -40,7 +40,7 @@ const parsearValoresImpresiones = (valores) => {
 const parsearValoresLoma = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 12 || i == 13 ||  i == 14) {
+    if (i == 12 || i == 13 ||  i == 15) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -53,7 +53,7 @@ const parsearValoresLoma = (valores) => {
 const parsearValoresPlotter = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 5 || i == 9 || i == 10 || i == 11) {
+    if (i == 5 || i == 9 || i == 10 || i == 12) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -66,7 +66,7 @@ const parsearValoresPlotter = (valores) => {
 const parsearValoresRemeras = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 9 || i == 11 || i == 12 || i == 13) {
+    if (i == 9 || i == 11 || i == 12 || i == 14) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -79,7 +79,7 @@ const parsearValoresRemeras = (valores) => {
 const parsearValoresSellos = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 8 || i == 9 || i == 10) {
+    if (i == 8 || i == 9 || i == 11) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -92,7 +92,7 @@ const parsearValoresSellos = (valores) => {
 const parsearValoresTalonarios = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 4 || i == 9 || i == 15 || i == 16 || i == 17) {
+    if (i == 4 || i == 9 || i == 15 || i == 16 || i == 18) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -105,7 +105,7 @@ const parsearValoresTalonarios = (valores) => {
 const parsearValoresTarjetas = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 4 || i == 9 || i == 10 || i == 11) {
+    if (i == 4 || i == 9 || i == 10 || i == 12) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -118,7 +118,7 @@ const parsearValoresTarjetas = (valores) => {
 const parsearValoresVarios = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 5 || i == 6 || i == 7) {
+    if (i == 5 || i == 6 || i == 8) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
@@ -131,7 +131,7 @@ const parsearValoresVarios = (valores) => {
 const parsearValoresVolantes = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 5 || i == 9 || i == 10 || i == 11) {
+    if (i == 5 || i == 9 || i == 10 || i == 12) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
