@@ -1,4 +1,7 @@
 const pool = require('../db');
+const mjsError = require('../models/mjs.error');
+const handleError = require('../services/handleError');
+const camposVacios = require('../services/valida.campos');
 
 const obtenerClientes = async (req, res) => {
   // if(req.query.nombre){
@@ -16,8 +19,7 @@ const obtenerClientes = async (req, res) => {
 
     res.json(rows.sort((a, b) => a.nombre.localeCompare(b.nombre)));
   } catch (error) {
-    console.log(error);
-    return res.status(500).json({ mensaje: "Algo salio mal"});
+    handleError(error, res, mjsError);
   }
 };
 
@@ -41,7 +43,7 @@ const obtenerCliente = async (req, res) => {
       cliente: rows[0]
     })
   } catch (error) {
-    console.log(error);
+    handleError(error, res, mjsError);
   }
 };
 
@@ -92,12 +94,33 @@ const crearCliente = async (req, res) => {
       });
     ;
   } catch (error) {
-    console.log(error);
+    handleError(error, res, mjsError);
   }
 };
 
 const editarCliente = async (req, res) => {
-  
+  const { id, nombre, telefono, email, observaciones } = req.body;
+
+  if(camposVacios([nombre,telefono]))
+    return res.json({ actualizado: false, mensaje: 'Nombre y telefono son obligatorios'});
+
+  try {
+    const [rows] = await pool.query(
+      `UPDATE clientes SET
+        nombre = ?,
+        telefono = ?,
+        email = ?,
+        observaciones = ?
+      WHERE id = ?`,
+      [nombre, telefono, email, observaciones, id]
+    );
+
+    if(rows.affectedRows == 0) return res.json({ actualizado: false, mensaje: 'No se pudieron actualizar los datos'});
+    
+    res.json({ actualizado: true, mensaje: 'Datos actualizados'});
+  } catch (error) {
+    handleError(error, res, mjsError);
+  }
 };
 
 module.exports = {
