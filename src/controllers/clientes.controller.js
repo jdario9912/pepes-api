@@ -96,8 +96,13 @@ const crearCliente = async (req, res) => {
   }
 };
 
+const editarCliente = async (req, res) => {
+  
+};
+
 module.exports = {
   obtenerClientes,
   obtenerCliente,
-  crearCliente
+  crearCliente,
+  editarCliente
 }
