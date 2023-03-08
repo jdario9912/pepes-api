@@ -1,4 +1,5 @@
 -- ESTE PROCEDURE BUSCA ORDENES POR EL ID DEL CLIENTE
+-- lo uso en 'ordenes.cliente.controller.js'
 
 DELIMITER $$
 CREATE PROCEDURE ordenes_cliente(IN id INT(2))

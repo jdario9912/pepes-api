@@ -1,4 +1,5 @@
 -- ESTE PROCEDURE BUSCA UNA ORDEN SEGUN NUMERO DE ORDEN Y TABLA
+-- lo uso en 'pedido.controller.js'
 
 DELIMITER $$
 CREATE PROCEDURE buscar_pedido(IN nro_orden BIGINT(15))

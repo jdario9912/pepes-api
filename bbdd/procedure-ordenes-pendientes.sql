@@ -1,4 +1,5 @@
 -- ESTE PROCEDURE BUSCA TODAS LAS ORDENES PENDIENTES
+-- Lo uso en 'ordenes.pendientes.controller.js'
 
 DELIMITER $$
 CREATE PROCEDURE buscar_ordenes_pendientes()

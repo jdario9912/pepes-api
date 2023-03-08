@@ -1,4 +1,5 @@
 -- ESTE PROCEDURE BUSCA UNA ORDEN SEGUN NUMERO DE ORDEN
+-- lo uso en 'busqueda.controller.js'
 
 DELIMITER $$
 CREATE PROCEDURE buscar_orden_por_numero(IN nro_orden BIGINT(15))
