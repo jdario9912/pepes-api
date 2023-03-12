@@ -105,7 +105,7 @@ const parsearValoresTalonarios = (valores) => {
 const parsearValoresTarjetas = (valores) => {
   const nuevosValores = [];
   for (let i = 0; i < valores.length; i++) {
-    if (i == 4 || i == 9 || i == 10 || i == 12) {
+    if (i == 5 || i == 10 || i == 11 || i == 13) {
       const element = parseInt(valores[i]);
       nuevosValores.push(element);
       continue
